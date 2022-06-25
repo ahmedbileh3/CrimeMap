@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Home Page</title>
+    <meta name="viewport" content="initial -scale=1.0">
+    <meta charset="utf-8">
+    
+    <!-- StyleSheets. -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.15/css/bootstrap-multiselect.css" integrity="sha256-7stu7f6AB+1rx5IqD8I+XuIcK4gSnpeGeSjqsODU+Rk=" crossorigin="anonymous" />
+    <link rel="stylesheet"  href="style.css">
+    
+     <!-- Bootstrap scripts. -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- SEARCH BAR CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/solid.css">
+
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+           
+            <a href="entry.html">
+            <img class="Mapicon" src="images/Mapicon.png">
+            <a class="navbar-brand" href="#">Crime Map +</a>
+            </a>
+            <a id="subh" class="navbar-brand" href="crimes.html">Crime Types</a>
+            <a id="subh" class="navbar-brand" href="stats.html">Statistics</a>
+    
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+               <div class="search-box">
+                    <div class="col">
+                    <input class="form-control" id="search" type="text" placeholder="&#xF002; Search Crimes..." style="font-family: Arial, 'Font Awesome 5 Free'" onchange="openPage()"  />
+                    </div>
+                </div>
+                <ul class="navbar-nav mr-auto">
+                </ul>
+                <div class="mt-2 mt-md-0">
+                    <span class="severity" href="crimes.html" alt="white">Crime Severity =</span>
+                    <span class="minor"><img src="https://maps.google.com/mapfiles/ms/icons/pink-dot.png" alt="pink" />Minor</span>
+                    <span class="intermediate"><img src="https://maps.google.com/mapfiles/ms/icons/yellow-dot.png" alt="yellow" />Intermediate</span>
+                    <span class="major"><img src="https://maps.google.com/mapfiles/ms/icons/orange-dot.png" alt="orange" />Major</span>
+                    <span class="critical"><img src="https://maps.google.com/mapfiles/ms/icons/red-dot.png" alt="red" />Critical</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container-main">
+    <div class="col-md-8">
+    <h1>About the Crime Map +</h1>
+
+    <p>This map is the new and improved version of the original which is located at the Police.co.uk website. The Crime Map+ is populated with data obtained from the crimes API and submitted by local forces.</p>
+    
+    <h2>What's New?</h2>
+    
+    <p>Previously, users were unable to visualise the severity of each crime in the original map. But with the Crime Map + users are able to see a variety of different crime severities. The crime severity key can be seen below or by viewing the navigation bar.</p>
+    <div class="panel">
+                    <span class="severity" href="crimes.html" alt="white">Crime Severity =</span>
+                    <span class="minor"><img src="https://maps.google.com/mapfiles/ms/icons/pink-dot.png" alt="pink" /><strong>Minor</strong></span>
+                    <span class="intermediate"><img src="https://maps.google.com/mapfiles/ms/icons/yellow-dot.png" alt="yellow" /><strong>Intermediate</strong></span>
+                    <span class="major"><img src="https://maps.google.com/mapfiles/ms/icons/orange-dot.png" alt="orange" /><strong>Major</strong></span>
+                    <span class="critical"><img src="https://maps.google.com/mapfiles/ms/icons/red-dot.png" alt="red" /><strong>Critical</strong></span>      
+           
+    </div>
+    
+    <h2>Explore the Crimes</h2>
+    <p>Interact with the crime map below</p>
+    </div>
+    </div>
+    <div class="container-fluid">
+
+        <div class="row">
+            <!-- Google Maps -->
+            <div id="map" class="col-md-8"></div>
+            
+            <!-- Side panel that shows filters and details -->
+            <div class="col-md-4 side-panel">
+                <!-- Crime Type List -->
+                <div class="crimesTotal"> Edit crime type and month</div>
+                <select id="crimeType" class="form-control" multiple="multiple" onchange="createMarkers();">
+                </select>
+
+                <!-- Months List -->
+                <select id="month" class="form-control" multiple="multiple" onchange="createMarkers();">
+                    <option value="2021-01">January, 2021</option>
+                    <option value="2021-02">February, 2021</option>
+                    <option value="2021-03">March, 2021</option>
+                    <option value="2021-04">April, 2021</option>
+                    <option value="2021-05">May, 2021</option>
+                    <option value="2021-06">June, 2021</option>
+                    <option value="2021-07">July, 2021</option>
+                    <option value="2021-08">August, 2021</option>
+                    <option value="2021-09">September, 2021</option>
+                    <option value="2021-10">October, 2021</option>
+                    <option value="2021-11">November, 2021</option>
+                    <option value="2021-12">December, 2021</option>
+                </select>
+                
+                <!-- Total Crimes -->
+                <div id="crimeTotal" class="crimesTotal"></div>
+
+                <!-- Details -->
+                <div id="details" class="locationDetails"></div>
+                
+                <!-- Download Crime Data -->
+                <a href="https://data.police.uk/data" class="form-control">Download area crime data</a>
+              
+            </div>
+        </div>
+    </div>
+    
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+
+<!-- GoogleMaps API -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIgnPBhUoTV8iKsqkSoGQKfHUdAE-bXn8&callback=initMap&v=3"
+    type="text/javascript"></script>
+
+<!-- GoogleMaps MarkerCluster -->
+<script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
+
+<!-- Multiselect drop down list -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.15/js/bootstrap-multiselect.min.js" integrity="sha256-qoj3D1oB1r2TAdqKTYuWObh01rIVC1Gmw9vWp1+q5xw=" crossorigin="anonymous"></script>
+
+<!-- GoogleMaps Scripts -->
+<script src="script.js"></script>
+
+</body>    
+</html>

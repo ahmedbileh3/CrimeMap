@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.fas fa-search{
+    float: right;
+}
+
+body {
+    background-image: url(images/background-2.png);
+    background-repeat: repeat;
+    height: 100%;
+}
+    
+.form-control {
+    text-align: center;
+}
+
+
+#showcase{
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(images/entrypic.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center; 
+    text-align: center;
+    padding: 0 20px;
+ 
+}
+#showcase h1 {
+    color: floralwhite;
+    animation: transitionIn 0.75s;
+    font-size: 50px;
+    line-height: 1.2;
+   
+}
+
+#showcase p{
+    color: floralwhite;
+    animation: transitionIn 0.75s;
+    font-size: 20px;
+    
+}
+
+#showcase .button{
+    animation: transitionIn 3s;
+    font-size: 20px;
+    text-decoration: none;
+    color: floralwhite;
+    border: floralwhite 3px solid;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    
+    
+}
+
+#showcase .button:hover{
+    background:floralwhite;
+    color: darkslategray;
+}
+#map {
+    height: 601px;
+    width: 100%;    
+}
+
+.Mapicon {
+    width: 40px;
+    height: 40px;
+}
+.Mapicon2 {
+    width: 100px;
+    height: 100px;
+}
+
+
+.bar {
+
+    margin: 170px, auto;
+    width: 1000px;
+    height: 500px;
+    
+}
+
+.container-fluid {
+    margin-top: 10px;
+    
+}
+
+@keyframes transitionIn {
+    from {
+        
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+    
+    to {
+        
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+
+
+.container-main {
+    animation: transitionIn 0.75s;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.accordion__button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #333333;
+    color: white;
+    text-align: left;
+    transition: background 0.2s;
+}
+.accordion__button::after {
+    content: '\25be';
+    float: right;
+    transform:  scale(1.5);
+    
+}    
+.accordion__button--active + .accordion__content {display: block}
+.accordion__button--active + .accordion__content {display: block}
+.accordion__button--active + .accordion__content {display: block}
+.accordion__button--active + .accordion__content {display: block}
+.accordion__button--active + .accordion__content {display: block}
+.accordion__button--active + .accordion__content {display: block}
+.accordion__button--active + .accordion__content {display: block}
+.accordion__button--active + .accordion__content {display: block}
+.accordion__button--active + .accordion__content {display: block}
+.accordion__button--active + .accordion__content {display: block}
+.accordion__button--active + .accordion__content {display: block}
+.accordion__button--active + .accordion__content {display: block}
+.accordion__button--active + .accordion__content {display: block}
+.accordion__button--active {background: #555555 }
+.accordion__button--active::after {content: '\25b4'}
+
+.accordion__content {
+
+    padding: 0 15px;
+    font-family: sans-serif;
+    background: #eeeeee;
+    
+    display: none;
+    overflow: auto;
+            
+}
+
+.panel {
+    background-color: darkslategray;
+    width: 640px;
+}
+.side-panel {
+    padding-top: 1px;
+    background-color: #EAF2E9;
+    max-height: 601px;
+    overflow-y: auto;;
+}
+
+.side-panel select {
+    margin-bottom: 1px;
+}
+
+.locationDetails, .crimesTotal {
+    font-size: 20px !important;
+}
+
+.locationDetails table th, .locationDetails table td {
+    padding: 5px !important;
+    min-width: 132px;
+}
+
+.locationDetails hr {
+    border-color: gray;
+    margin-top: -10px;
+}
+
+.intermediate {
+    color: #FDF569;
+    margin-right: 20px;
+}
+
+.minor {
+    color: #E661AC;
+    margin-right: 20px;
+}
+
+.minor1 {
+    color: #E661AC;
+}
+
+.severity{
+    color: #FFF;
+    font-size: 20px;
+}
+
+.major {
+    color: #FF9900;
+    margin-right: 20px;
+}
+
+.critical {
+    color: #FD7567;
+    margin-right: 20px;
+}
+
+.critical1 {
+    color: #FD7567;
+}
+
+li{
+    list-style-position: inside;  
+}
+
+.multiselect-native-select {
+    background-color: white;
+    border: thin solid grey;
+    display: block;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.multiselect-native-select .btn-group, .multiselect-native-select .dropdown-menu, .multiselect {
+    width: 100%;
+}
+
+.multiselect-textbox {
+    display: inline-block;
+    width: 100px;
+    height: 25px;
+    pointer-events: all;
+}

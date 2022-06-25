@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Crimes Page</title>
+    <meta name="viewport" content="initial -scale=1.0">
+    <meta charset="utf-8">
+    
+    <!-- StyleSheets. -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet"  href="style.css">
+    
+     <!-- Bootstrap scripts. -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- SEARCH BAR CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/solid.css">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+           
+            <a href="entry.html">
+            <img class="Mapicon" src="images/Mapicon.png">
+                <a class="navbar-brand" href="index.html">Crime Map +</a>
+            </a>
+            <a class="navbar-brand" href="crimes.html">Crime Types</a>
+            <a id="subh" class="navbar-brand" href="stats.html">Statistics</a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+               <div class="search-box">
+                    <div class="col">
+                <input class="form-control" id="search" type="text" placeholder="&#xF002; Search Crimes..." style="font-family: Arial, 'Font Awesome 5 Free'"  />
+                    </div>
+                </div>
+                <ul class="navbar-nav mr-auto">
+                </ul>
+                <div class="mt-2 mt-md-0">
+                    <span class="severity" href="crimes.html" alt="white">Crime Severity =</span>
+                    <span class="minor"><img src="https://maps.google.com/mapfiles/ms/icons/pink-dot.png" alt="pink" />Minor</span>
+                    <span class="intermediate"><img src="https://maps.google.com/mapfiles/ms/icons/yellow-dot.png" alt="yellow" />Intermediate</span>
+                    <span class="major"><img src="https://maps.google.com/mapfiles/ms/icons/orange-dot.png" alt="orange" />Major</span>
+                    <span class="critical"><img src="https://maps.google.com/mapfiles/ms/icons/red-dot.png" alt="red" />Critical</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-main">
+        <div class="col-md-8"> 
+            <div class="accordion">
+              <h3>What is a crime?</h3>
+               <p>A crime is a deliberate act that causes physical or psychological harm, damage to or loss of property, and is against the law.
+                 </p>
+            
+             
+              <h3>Crime types</h3>
+               <p>The crime types were broken down from ‘<span class="minor1"><strong>Critical</strong></span>’ to ‘<span class="critical1"><strong>Critical</strong></span>’ crime types using the Crime Severity scale. See a breakdown of what the minor types are and the major types they include below.</p>
+               
+               <p>A crime is a deliberate act that causes physical or psychological harm, damage to or loss of property, and is against the law. </p>
+               
+                <button type="button"  class="accordion__button">
+                  <img src="https://maps.google.com/mapfiles/ms/icons/orange-dot.png" alt="orange" /><span class="major">Burglary</span>
+                
+                </button>
+                <div class="accordion__content">
+                
+                <p>Burglary is the theft, or attempted theft, from a premises where access is not authorised.</p>
+                
+                <p>Damage to a premises that appears to have been caused by a person attempting to enter to commit a burglary, is also counted as burglary.</p>
+                
+                <p> Charges for burlary are: </p>
+                
+                <ul>
+                    <li>
+                        5-10 years in prision
+                    </li>
+                </ul>    
+                
+                
+            
+                </div>
+            </div>
+            
+            <div class="accordion">
+             
+                <button type="button"  class="accordion__button">
+                  <img src="https://maps.google.com/mapfiles/ms/icons/pink-dot.png" alt="pink" /><span class="minor">Bicycle Theft</span></button>
+                <div class="accordion__content">
+                
+                <p>Bicycle theft is the crime of stealing a bicycle.</p>
+                
+                <p>What Happens to the Stolen Bike?  More professional thieves want to get better prices, and they have more bikes to sell, so they can't use the same strategy. They target more expensive bikes and will often try to resell them online to get a better price.</p>
+                
+                <p> Charges and penalties for bicycle theft are: </p>
+                
+                <ul>
+                    <li>
+                        Fine and a warning 
+                    </li>
+                </ul> 
+                
+                
+            
+                </div>
+            </div>
+            
+            <div class="accordion">
+             
+                <button type="button"  class="accordion__button">
+                  <img src="https://maps.google.com/mapfiles/ms/icons/red-dot.png" alt="red" /><span class="critical">Criminal Damage</span>    
+                
+                </button>
+                <div class="accordion__content">
+                
+                <p>Where property is intentionally destroyed or damaged, not necessarily to gain entry to premises or a vehicle.</p>
+                
+                <p>Damage to a premises that appears to have been caused by a person attempting to enter to commit a burglary, is also counted as burglary.</p>
+                
+                <p> Charges for criminal damage are: </p>
+                <ul>
+                    <li>
+                        Ranging from 3- to 7-years 
+                    </li>
+                </ul> 
+                
+                
+            
+                </div>
+            </div>
+            
+             <div class="accordion">
+             
+                <button type="button"  class="accordion__button" id="Drugs">
+                  <img src="https://maps.google.com/mapfiles/ms/icons/orange-dot.png" alt="orange" /><span class="major">Drugs</span>    
+                
+                </button>
+                <div class="accordion__content">
+                
+                <p>Possession, consumption, supply of or the intent to supply illegal drugs.</p>
+                
+                <p>Damage to a premises that appears to have been caused by a person attempting to enter to commit a burglary, is also counted as burglary.</p>
+                
+                <p> Charges for drugs are: </p>
+                  <ul>
+                    <li>
+                        Depending on drug classification, could get fined from £90 to £1,000
+                    </li>
+                </ul> 
+                
+                
+            
+                </div>
+            </div>
+            
+            <div class="accordion">
+             
+                <button type="button"  class="accordion__button">
+                  <img src="https://maps.google.com/mapfiles/ms/icons/red-dot.png" alt="red" /><span class="critical">Possession of weapons</span>     
+                
+                </button>
+                <div class="accordion__content">
+                
+                <p> Possession of a weapon is the unlawful possession of a weapon by an individual.</p>
+                
+                <p>Many societies both past and present have placed restrictions on what forms of weaponry private citizens (and to a lesser extent police) are allowed to purchase, own, and carry in public.</p>
+                
+                <p> Charges for possession of weapons are: </p>
+                <ul>
+                    <li>
+                        Misdemeanor weapons charges can get you up to 12 months in jail and a maximum fine of £1,000. Felony weapons charges are punishable by anywhere from one to 20 years in prison.
+                    </li>
+                </ul> 
+                
+                
+                
+                
+            
+                </div>
+            </div>
+            
+            <div class="accordion">
+             
+                <button type="button"  class="accordion__button">
+                  <img src="https://maps.google.com/mapfiles/ms/icons/pink-dot.png" alt="pink" /><span class="minor">Public order</span>   
+                
+                </button>
+                <div class="accordion__content">
+                
+                <p>public-order crime is defined by Siegel as "crime which involves acts that interfere with the operations of society and the ability of people to function efficiently"</p>
+                
+
+                
+                <p> Charges for public order are: </p>
+                <ul>
+                    <li>
+                        The maximum penalty on conviction on indictment is 3 years' imprisonment and/or a fine of unlimited amount
+                    </li>
+                </ul> 
+                
+                
+                
+            
+                </div>
+            </div>
+            
+            <div class="accordion">
+             
+                <button type="button"  class="accordion__button">
+                  <img src="https://maps.google.com/mapfiles/ms/icons/orange-dot.png" alt="orange" /><span class="major">Robbery</span>    
+                
+                </button>
+                <div class="accordion__content">
+                
+                <p>Robbery is the crime of taking or attempting to take anything of value by force, threat of force, or by putting the victim in fear.</p>
+                
+
+                
+                <p> Charges for robbery are: </p>
+                <ul>
+                    <li>
+                       The maximum sentence for robbery in the UK is life imprisonment, however the court will consider a number of options before the appropriate sentence is decided. The court will also consider whether the offender should be classified as a 'dangerous' person.
+                    </li>
+                </ul> 
+                
+                
+            
+                </div>
+            </div>
+            
+            <div class="accordion">
+             
+                <button type="button"  class="accordion__button">
+                 <img src="https://maps.google.com/mapfiles/ms/icons/yellow-dot.png" alt="yellow" /><span class="intermediate">Shoplifting</span>    
+                
+                </button>
+                <div class="accordion__content">
+                
+                <p>Shoplifting is the theft of goods from an open retail establishment, typically by concealing a store item on one's person, in pockets, under clothes, or in a bag, and leaving the store without paying.</p>
+                
+                
+                <p> Charges for shoplifting are: </p>
+                <ul>
+                    <li>
+                       If caught shoplifting, you either will be charged with theft under s1 of the Theft Act 1986; or, if the goods stolen are worth less than £200, for low-value shoplifting under s176 of the Anti-Social Behaviour, Crime and Policing Act.
+                    </li>
+                </ul> 
+                
+                
+                
+            
+                </div>
+            </div>
+            
+            <div class="accordion">
+             
+                <button type="button"  class="accordion__button">
+                 <img src="https://maps.google.com/mapfiles/ms/icons/yellow-dot.png" alt="yellow" /><span class="intermediate">Personal theft</span>     
+                
+                </button>
+                <div class="accordion__content">
+                
+                <p>Identity theft occurs when someone uses another person's personal identifying information, like their name, identifying number, or credit card number, without their permission, to commit fraud or other crimes. </p>
+                
+    
+    
+                <p> Charges for personal theft are: </p>
+                <ul>
+                    <li>
+                       Misdemeanor grand theft carries a basic punishment of 3 years of informal probation, up to six months in jail, a £1000 fine, or both.
+                    </li>
+                </ul> 
+                
+                
+        
+                </div>
+            </div>
+            
+            <div class="accordion">
+             
+                <button type="button"  class="accordion__button">
+                 <img src="https://maps.google.com/mapfiles/ms/icons/orange-dot.png" alt="orange" /><span class="major">Vehicle crime</span>     
+                
+                </button>
+                <div class="accordion__content">
+                
+                <p>This refers to thefts from inside the vehicle, such as a handbag and thefts from the vehicle itself, such as a spare wheel or a windscreen wiper blade.</p>
+        
+                
+                <p> Charges for vehicle crime are: </p>
+                <ul>
+                    <li>
+                       The maximum prison sentence for an individual convicted of this criminal offence is six months and/or a fine of £5,000.
+                    </li>
+                </ul> 
+                
+                
+            
+                </div>
+            </div>
+            
+             <div class="accordion">
+             
+                <button type="button"  class="accordion__button">
+                 <img src="https://maps.google.com/mapfiles/ms/icons/orange-dot.png" alt="orange" /><span class="major">Violent crime</span>     
+                
+                </button>
+                <div class="accordion__content">
+                
+                <p>A violent crime, violent felony, crime of violence or crime of a violent nature is a crime in which an offender or perpetrator uses or threatens to use force upon a victim.</p>
+                
+                <p> Charges for violent crime are: </p>
+                <ul>
+                    <li>
+                       Incarceration is a common penalty for those convicted of a violent felony. Felony offenses always have a potential prison sentence of a year or more in jail.
+                    </li>
+                </ul> 
+                
+                
+                
+            
+                </div>
+            </div>
+          
+            
+            
+
+        </div> 
+    </div>
+    
+
+<script src="script.js"></script>
+</body>    
+</html>
